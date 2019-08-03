@@ -5,7 +5,8 @@ fn main() {
     let x: usize = 2023;
     let mut dp = Dp { table: vec![None; x + 1] };
     let y = dp.dp(&[2,3,4], x as i32);
-    println!("{} {}", x, y);
+    let z = dp.dp_recurse(&[2,3,4], x as i32);
+    println!("{} {} {}", x, y, z);
 }
 
 struct Dp {
